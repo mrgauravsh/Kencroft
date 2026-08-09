@@ -1,7 +1,16 @@
 {
-  "name": "kencroft-vercel",
+  "name": "kencroft-strategy-group",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "npm --prefix frontend run build"
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix frontend start",
+    "dev": "npm --prefix frontend run dev"
+  },
+  "dependencies": {
+    "ajv": "^8.12.0"
+  },
+  "overrides": {
+    "ajv": "^8.12.0"
   }
 }
