@@ -1,0 +1,141 @@
+{
+  "theme": "dark",
+  "art_direction": "Dark luxury with an editorial feel, targeting premium hospitality consulting. The design must communicate executive-level expertise, timeless elegance, and prestige without excessive decoration. It focuses on a cinematic, moody atmosphere with deep navy backgrounds and refined gold accents.",
+  "typography": {
+    "headings": {
+      "family": "Cormorant Garamond",
+      "weights": ["300", "400", "600"],
+      "usage": "Use tight letter spacing (tracking-tight) and leading-none for H1/H2 to create an editorial, classic luxury feel. Avoid Inter for headings."
+    },
+    "body": {
+      "family": "Manrope",
+      "weights": ["300", "400", "500"],
+      "usage": "Clean, crisp sans-serif for optimal readability in data and body copy. Use leading-relaxed."
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-light text-white",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight font-light text-white",
+      "h3": "text-2xl sm:text-3xl font-light text-white",
+      "h4": "text-xl sm:text-2xl font-light text-white",
+      "body": "text-base md:text-lg text-[#E2E8F0] font-light",
+      "overline": "text-xs md:text-sm uppercase tracking-[0.2em] text-[#D4AF37] font-medium"
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#050B14",
+      "secondary": "#0A1120",
+      "tertiary": "#0F172A"
+    },
+    "accent": {
+      "primary": "#D4AF37",
+      "secondary": "#E5C158",
+      "hover": "#B5952F"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#E2E8F0",
+      "muted": "#94A3B8",
+      "inverse": "#050B14"
+    },
+    "border": {
+      "subtle": "rgba(255, 255, 255, 0.08)",
+      "accent": "rgba(212, 175, 55, 0.4)"
+    }
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "section_padding": "py-24 md:py-32",
+    "grid": "grid-cols-1 md:grid-cols-12 gap-8 md:gap-12",
+    "strategy": "Embrace asymmetry and generous negative space (p-12 to p-32). Avoid perfectly centering all content; create visual tension through left-aligned blocks offset by rich photography."
+  },
+  "surfaces": {
+    "cards": "Solid dark navy (bg-[#0A1120]) with a subtle border (border border-white/5). Do not use drop shadows. On hover: border-[#D4AF37]/50 and a slight upward transform (-translate-y-1).",
+    "glass": "Crystal Glass variant: bg-[#050B14]/70 backdrop-blur-xl border-b border-white/10. Use for the sticky header to maintain readability.",
+    "inputs": "bg-[#0A1120] border border-white/10 text-white placeholder-white/40 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] rounded-none px-4 py-3"
+  },
+  "motion": {
+    "libraries": [
+      "framer-motion",
+      "lenis",
+      "react-fast-marquee"
+    ],
+    "hero_reveal": "Signature on-load moment: Masked line-by-line reveal for H1 text using Framer Motion (overflow-hidden wrapper, text translates up from 100% to 0%).",
+    "scroll_reveal": "Subtle fade-in and translateY(30px) triggered on scroll. Stagger children for lists/grids to create a cascading effect.",
+    "interactions": "Hover states must include a transition (e.g., transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease)."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#D4AF37] text-[#050B14] px-8 py-4 uppercase tracking-wider text-xs md:text-sm font-semibold hover:bg-[#E5C158] transition-colors rounded-none",
+      "secondary": "bg-transparent border border-[#D4AF37] text-[#D4AF37] px-8 py-4 uppercase tracking-wider text-xs md:text-sm font-semibold hover:bg-[#D4AF37]/10 transition-colors rounded-none"
+    },
+    "navigation": "Sticky top-0 z-50 Crystal Glass header. Desktop links clearly visible (no hamburger on desktop). Elegant line-through or gold underline on hover.",
+    "marquee": "A very slow editorial marquee. Font: Cormorant Garamond italic. Huge text (text-6xl or 8xl) with transparent fill and 1px white/20 stroke for a cinematic background texture.",
+    "accordion": "FAQ Accordion using Shadcn. Flat design, border-b border-white/10 only, no side borders. Gold plus/minus icon.",
+    "forms": "Use Shadcn forms heavily customized to fit the luxury dark theme. Flat inputs, no border-radius. Submit button uses primary button styles."
+  },
+  "page_blueprints": {
+    "Home": {
+      "Hero": "Fullscreen kinetic hero. Background: Dark architectural/hospitality image with a heavy bg-[#050B14]/60 overlay. Masked line-by-line reveal for 'Strategy for Growth'. Subtle 3D/Parallax effect on scroll.",
+      "About_Preview": "Asymmetrical layout. Large typography on left, overlapping clipped images on right.",
+      "Marquee": "Slow moving 'PREMIUM HOSPITALITY CONSULTING' in outline serif font.",
+      "Services_Preview": "Interactive bento grid (9 service categories). Cards reveal a gold border and brief description on hover.",
+      "Why_Choose_Us": "Animated feature cards with animated statistics counters (using framer-motion useSpring/useMotionValue).",
+      "Consulting_Process": "Animated 6-step timeline. A vertical line traces downwards on scroll, lighting up each step in gold.",
+      "Industries": "Cards showcasing distinct hospitality sectors (Resorts, Chains, Investors) with distinct hover imagery.",
+      "Testimonials": "Minimalist carousel or grid. Large serif quotation marks in gold.",
+      "Lead_Generation": "Title: 'Let's Discuss Your Hotel's Growth'. High-end multi-field enquiry form on a rich dark background.",
+      "FAQ": "Accordion style minimal FAQ section.",
+      "Blog_Preview": "Latest 3 insights. Editorial card layout.",
+      "Footer": "Massive py-24 padding. Large logo. Newsletter signup form. Contact details prominently displayed."
+    },
+    "About": "Deep dive into the firm's ethos. Numbered manifesto chapters with heavy use of typography and negative space. Team section with high-contrast grayscale portraits.",
+    "Services": "Detailed list of the 9 categories. Each section features a large image and a grid of specific deliverables.",
+    "Industries": "Detailed breakdown of served markets. Case study highlights.",
+    "Consulting_Process": "An expanded, fully interactive version of the home timeline. Deep dive into Kencroft's methodology.",
+    "Blog": "Editorial grid. Categories filter. Article pages feature a large header image, narrow reading column (max-w-2xl), and drop caps.",
+    "Contact": "Two-column layout. Left: Contact info (info@kencroftstrategy.in, +91 8909206368) and a sleek WhatsApp CTA button. Right: The premium lead-generation form. Map placeholder below.",
+    "Admin_Dashboard": "Protected route. Strict dense grid layout (Archetype 4/5 hybrid). Shadcn data tables to view captured leads. Solid backgrounds, functional clarity."
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1767460189627-be43d57fe1c2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBob3RlbCUyMGV4dGVyaW9yJTIwbmlnaHR0aW1lfGVufDB8fHx8MTc4NjA3NTU1N3ww&ixlib=rb-4.1.0&q=85",
+      "description": "Ornate building illuminated with warm yellow lights at night, sets a prestigious tone."
+    },
+    "about_section": {
+      "url": "https://images.pexels.com/photos/5778520/pexels-photo-5778520.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Two business professionals discussing strategy inside a luxurious setting, emphasizing executive consulting."
+    },
+    "services": [
+      {
+        "url": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwzfHxoaWdoJTIwZW5kJTIwcmVzb3J0JTIwbHV4dXJ5fGVufDB8fHx8MTc4NjA3NTU1N3ww&ixlib=rb-4.1.0&q=85",
+        "description": "High-end resort pool, representing hospitality operations."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558959357-685f9c7ace7b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwyfHxwcmVtaXVtJTIwaG90ZWwlMjBjb25jaWVyZ2UlMjBzZXJ2aWNlfGVufDB8fHx8MTc4NjA3NTU1N3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Concierge / premium digital service interaction."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1684498017911-ffc0e7039752?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBob3NwaXRhbGl0eSUyMGFyY2hpdGVjdHVyZXxlbnwwfHx8fDE3ODYwNzU1NTd8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Luxury hospitality architecture."
+      }
+    ],
+    "process": {
+      "url": "https://images.unsplash.com/photo-1779700210487-a01758a3c55a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmVzJTIwbWVldGluZyUyMHN0cmF0ZWd5JTIwbHV4dXJ5fGVufDB8fHx8MTc4NjA3NTU1Nnww&ixlib=rb-4.1.0&q=85",
+      "description": "Empty conference room with a panoramic city view, symbolizing high-level strategic planning."
+    }
+  },
+  "testing": {
+    "attributes": "All interactive and key informational elements MUST include a `data-testid` attribute (e.g., data-testid='hero-cta-button', data-testid='contact-form-submit')."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You MUST NOT apply universal transition (e.g., transition: all). Always add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container in CSS.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "NEVER use placeholder text for images. Only use the provided image URLs.",
+    "All navigation must be visible on desktop. No hamburger menus on desktop viewports.",
+    "Header must have a background (e.g., Crystal Glass). Do not use fully transparent headers over hero images.",
+    "Do not use generic SaaS blue. Stick strictly to the defined Dark Navy and Gold palette.",
+    "All interactive and key informational elements MUST include a `data-testid` attribute to facilitate robust automated testing."
+  ]
+}

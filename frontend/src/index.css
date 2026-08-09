@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #050B14;
+  --navy-2: #0A1120;
+  --navy-3: #0F172A;
+  --gold: #D4AF37;
+  --gold-2: #E5C158;
+}
+
+* { box-sizing: border-box; }
+
+html { scrollbar-width: thin; scrollbar-color: var(--gold) var(--navy); }
+body {
+  margin: 0;
+  background-color: var(--navy);
+  color: #E2E8F0;
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif-lux { font-family: 'Cormorant Garamond', Georgia, serif; }
+.font-body { font-family: 'Manrope', sans-serif; }
+
+::selection { background: var(--gold); color: var(--navy); }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: rgba(212,175,55,0.5); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+  color: transparent;
+}
+.text-stroke-gold {
+  -webkit-text-stroke: 1px rgba(212,175,55,0.55);
+  color: transparent;
+}
+
+.gold-line {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.lux-input {
+  background: var(--navy-2);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 0.85rem 1rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Manrope', sans-serif;
+}
+.lux-input::placeholder { color: rgba(255,255,255,0.35); }
+.lux-input:focus { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+
+@layer base {
+  :root {
+    --background: 222 47% 5%;
+    --foreground: 0 0% 100%;
+    --card: 222 40% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 222 40% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 45 65% 52%;
+    --primary-foreground: 222 47% 5%;
+    --secondary: 222 30% 12%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 222 30% 12%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 45 65% 52%;
+    --accent-foreground: 222 47% 5%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 100% / 0.08;
+    --input: 222 30% 12%;
+    --ring: 45 65% 52%;
+    --radius: 0rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
